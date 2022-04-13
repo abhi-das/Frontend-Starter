@@ -7,6 +7,7 @@ Features Enabled:
 - NgRx Store Implementation
 - Ng-bootstrap Enabled
 - Advance Angular features implementation (@Inject, Token etc)
+- Custom Angular Pipe Module (ProductPipesModule) implementated
 - Git Actions for CI/CD Pipelines
 - Code Coverage Enabled for Each Angular Modules
 - Application Theme Structured
