@@ -38,9 +38,6 @@ export class CartService {
       .get<cartModel.CartProductEntry[]>(this.cartServiceConfig.apiURL)
       .pipe(
         map((res) => res)
-        // catchError(() => {
-        //   return of({ message: 'Error on loading products!'});
-        // })
       );
   }
 }

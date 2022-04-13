@@ -11,3 +11,7 @@ export * from './lib/cart-item/cart-item.component';
 export * from './lib/header/header.component';
 
 export * from './lib/page-not-found/page-not-found.component';
+
+export * from './lib/button-cta/button-cta.component';
+
+export * from './lib/content-loader/content-loader.component';

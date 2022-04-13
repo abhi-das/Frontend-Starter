@@ -31,6 +31,7 @@ export class CartComponent implements OnInit, OnDestroy {
       .subscribe((rs) => {
         if (rs.length) {
           this.cartItms = rs;
+          this.isCartLoading = false;
         }
       });
   }

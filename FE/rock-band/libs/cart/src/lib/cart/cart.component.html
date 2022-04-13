@@ -3,4 +3,8 @@
 <ng-container *ngIf="cartItms">
   <rock-band-cart-items [cartItms]="cartItms"></rock-band-cart-items>
 </ng-container>
+
+<ng-container *ngIf="isCartLoading">
+  <rock-band-content-loader></rock-band-content-loader>
+</ng-container>
 <!-- <router-outlet></router-outlet> -->

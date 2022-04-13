@@ -8,6 +8,7 @@ Features Enabled:
 - Ng-bootstrap Enabled
 - Advance Angular features implementation (@Inject, Token etc)
 - Custom Angular Pipe Module (ProductPipesModule) implementated
+- Custom Http Error Handing using HttpInterceptor
 - Git Actions for CI/CD Pipelines
 - Code Coverage Enabled for Each Angular Modules
 - Application Theme Structured

@@ -1,3 +1,5 @@
+import { LocationStrategy, PathLocationStrategy } from '@angular/common';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
@@ -8,6 +10,7 @@ import { CartComponent, CartEffectServices, CartModule, CartModuleConfig, CartMo
 import { cartStore, productStore } from '@rock-band-ng-store';
 import { ProductEffectServices, ProductModule, ProductModuleConfig, ProductModuleConfigToken, ProductsComponent } from '@rock-band-product';
 import { PageNotFoundComponent, RockUiModule } from '@rock-band-rock-ui';
+import { HttpErrorInterceptor } from '@rock-band/rock-band-common';
 import { environment } from '../environments/environment';
 
 import { AppComponent } from './app.component';
@@ -24,8 +27,14 @@ const routes: Routes = [
     outlet: 'cartOutlet',
   },
   {
-    path: '404',
+    path: 'cart-not-found',
     component: PageNotFoundComponent,
+    outlet: 'cartOutlet',
+  },
+  {
+    path: 'product-not-found',
+    component: PageNotFoundComponent,
+    outlet: 'productOutlet',
   },
   {
     path: '',
@@ -67,6 +76,15 @@ const routes: Routes = [
         apiURL: environment.productApiUrl,
       },
     },
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: HttpErrorInterceptor,
+      multi: true
+    },
+    Location,
+    {
+      provide: LocationStrategy, useClass: PathLocationStrategy
+    }
   ],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],

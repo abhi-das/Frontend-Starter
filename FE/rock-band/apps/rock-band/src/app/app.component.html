@@ -1,6 +1,36 @@
 <section class="container" role="main">
-    <div class="row">
-        <rock-banner></rock-banner>
+    <div class="row pt-2 pb-2">
+        <div class="col-md-1 text-center">
+            <span class="fs-2 logo" title="Brand Logo"><i class="bi bi-command"></i></span>
+        </div>
+        <div class="col-md-5">
+            <rock-band-navbar></rock-band-navbar>
+        </div>
+        <div class="col-md-4 pt-3">
+            <rock-search></rock-search>
+        </div>
+        <div class="col-md-2">
+            <div class="d-flex justify-content-between">
+                <rock-band-button-cta>
+                    <button class="btn btn-outline-info p-2" title="Profile">
+                        <i class="bi bi-person"></i>
+                        <p class="mb-0 fs-7">Profile</p>
+                    </button>
+                </rock-band-button-cta>
+                <rock-band-button-cta>
+                    <button class="btn btn-outline-warning p-2" title="Wislist">
+                        <i class="bi bi-heart"></i>
+                        <p class="mb-0 fs-7">Wislist</p>
+                    </button>
+                </rock-band-button-cta>
+                <rock-band-button-cta>
+                    <button class="btn btn-outline-success p-2" title="Bag">
+                        <i class="bi bi-handbag"></i>
+                        <p class="mb-0 fs-7">Bag</p>
+                    </button>
+                </rock-band-button-cta>
+            </div>
+        </div>
     </div>
     <div class="row">
         <section class="col-md-8">
@@ -11,3 +41,4 @@
         </section>
     </div>
 </section>
+
