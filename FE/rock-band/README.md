@@ -12,6 +12,7 @@ Features Enabled:
 - Code Coverage Enabled for Each Angular Modules
 - Application Theme Structured
 - Storybook Enabled
+- Dockerize Implementation
 
 ### Product Module Layout
 
