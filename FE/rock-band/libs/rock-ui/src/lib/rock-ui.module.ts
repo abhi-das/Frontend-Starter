@@ -10,9 +10,10 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { ButtonCtaComponent } from './button-cta/button-cta.component';
 import { ContentLoaderComponent } from './content-loader/content-loader.component';
 import { GiftWrapComponent } from './gift-wrap/gift-wrap.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
-  imports: [CommonModule, NgbModule],
+  imports: [CommonModule, NgbModule, RouterModule],
   declarations: [
     BannerComponent,
     SearchComponent,
