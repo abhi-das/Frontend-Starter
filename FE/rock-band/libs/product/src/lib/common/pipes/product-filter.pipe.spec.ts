@@ -10,7 +10,7 @@ describe('ProductFilterPipe', () => {
         name: 'Ergonomic Concrete Cheese',
         description:
           'The beautiful range of Apple Naturalé that has an exciting mix of natural ingredients. With the Goodness of 100% Natural Ingredients',
-      }
+      },
     },
     {
       isAddedToCart: false,
@@ -19,7 +19,7 @@ describe('ProductFilterPipe', () => {
         name: 'Refined Steel Cheese',
         description:
           'The automobile layout consists of a front-engine design, with transaxle-type transmissions mounted at the rear of the engine and four wheel drive',
-      }
+      },
     },
     {
       isAddedToCart: false,
@@ -27,7 +27,7 @@ describe('ProductFilterPipe', () => {
         id: 3,
         name: 'Restructure Steel Towels',
         description: 'The automobile layout consists of a front-engine design',
-      }
+      },
     },
   ];
   const filteredList = [
@@ -38,7 +38,7 @@ describe('ProductFilterPipe', () => {
         name: 'Refined Steel Cheese',
         description:
           'The automobile layout consists of a front-engine design, with transaxle-type transmissions mounted at the rear of the engine and four wheel drive',
-      }
+      },
     },
   ];
   it('create an instance', () => {

@@ -3,7 +3,7 @@
     class="card-img-top"
     [src]="imgSrc || 'https://via.placeholder.com/150/'"
     alt="Card image cap"
-    title="{{title}}"
+    title="{{ title }}"
   />
   <div class="card-body px-2">
     <h3 class="card-text mb-0 fs-6">{{ title }}</h3>
@@ -11,9 +11,11 @@
       <span>₹ {{ price }}</span>
     </div>
     <div class="text-center">
-      <button class="btn text-primary btn-sm"
+      <button
+        class="btn text-primary btn-sm"
         title="Remove product"
-        aria-label="Remove product">
+        aria-label="Remove product"
+      >
         <i class="bi bi-dash fs-5"></i>
       </button>
       <button
@@ -25,9 +27,11 @@
       >
         <i class="bi bi-cart3 fs-5"></i>
       </button>
-      <button class="btn text-primary btn-sm"
+      <button
+        class="btn text-primary btn-sm"
         title="Add product"
-        aria-label="Add product">
+        aria-label="Add product"
+      >
         <i class="bi bi-plus fs-5"></i>
       </button>
     </div>

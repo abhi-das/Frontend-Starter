@@ -14,11 +14,7 @@ describe('ProductsComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [ProductsComponent],
-      imports: [
-        HttpClientModule,
-        ProductPipesModule,
-        StoreModule.forRoot({}),
-      ],
+      imports: [HttpClientModule, ProductPipesModule, StoreModule.forRoot({})],
       schemas: [CUSTOM_ELEMENTS_SCHEMA],
     }).compileComponents();
   });

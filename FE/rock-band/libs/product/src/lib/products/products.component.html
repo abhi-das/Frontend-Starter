@@ -6,9 +6,10 @@
 <ng-container *ngIf="productItm$ | async">
   <div class="row">
     <div class="w-50 pb-4">
-      <rock-search 
-      placeholderText="Product Search"
-      (inputChange)="searchProductHandler($event)"></rock-search>
+      <rock-search
+        placeholderText="Product Search"
+        (inputChange)="searchProductHandler($event)"
+      ></rock-search>
     </div>
   </div>
   <rock-band-product-items

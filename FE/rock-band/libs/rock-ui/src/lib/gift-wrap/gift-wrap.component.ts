@@ -5,5 +5,4 @@ import { Component } from '@angular/core';
   templateUrl: './gift-wrap.component.html',
   styles: [],
 })
-export class GiftWrapComponent {
-}
+export class GiftWrapComponent {}
