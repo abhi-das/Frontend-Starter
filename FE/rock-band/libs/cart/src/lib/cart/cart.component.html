@@ -1,4 +1,7 @@
-<h4 class="text-center mb-4">Shopping Cart</h4>
+<rock-band-gift-wrap></rock-band-gift-wrap>
+
+<h2 class="text-center mt-4 mb-4 bg-light p-2 fs-5">Shopping Cart</h2>
+
 
 <ng-container *ngIf="cartItm$ | async">
   <rock-band-cart-items [cartItms]="cartItm$ | async"></rock-band-cart-items>

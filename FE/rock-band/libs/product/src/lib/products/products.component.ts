@@ -37,7 +37,6 @@ export class ProductsComponent implements OnInit, OnDestroy {
   }
 
   searchProductHandler(event: any) {
-    console.log(event.currentTarget.value);
     this.query = event.currentTarget.value;
   }
 

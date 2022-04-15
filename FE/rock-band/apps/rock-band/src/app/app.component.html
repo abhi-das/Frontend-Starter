@@ -1,5 +1,5 @@
 <section class="container" role="main">
-  <div class="row pt-2 pb-2">
+  <div class="row pt-4 pb-4">
     <div class="col-md-1 text-center">
       <span class="fs-2 logo" title="Brand Logo"
         ><i class="bi bi-command"></i
@@ -9,7 +9,7 @@
       <rock-band-navbar></rock-band-navbar>
     </div>
     <div class="col-md-4 pt-3">
-      <rock-search></rock-search>
+      <rock-search placeholderText="Search"></rock-search>
     </div>
     <div class="col-md-2">
       <div class="d-flex justify-content-between">
@@ -35,10 +35,10 @@
     </div>
   </div>
   <div class="row">
-    <section class="col-md-9">
+    <section class="col-md-8">
       <router-outlet name="productOutlet"></router-outlet>
     </section>
-    <section class="col-md-3">
+    <section class="col-md-4">
       <router-outlet name="cartOutlet"></router-outlet>
     </section>
   </div>

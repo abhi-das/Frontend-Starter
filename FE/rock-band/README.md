@@ -15,15 +15,15 @@ Features Enabled:
 - Storybook Enabled
 - Dockerize Implementation
 
-### Product Module Layout
+### Product and Shopping Cart Modules Layout
 
-<img src="./git_assets/prd-view.png" width="50%"/>
+<img src="./git_assets/prd-view.png" width="75%"/>
 
-### Shopping Cart Module Layout
+---
 
-<img src="./git_assets/cart-view.png" width="45%"/>
+### Project Script Guide:
 
-Project Script Guide:
+Navigate to `Frontend-Starter\FE\rock-band` folder
 
 - Setup Application
   - `yarn install`

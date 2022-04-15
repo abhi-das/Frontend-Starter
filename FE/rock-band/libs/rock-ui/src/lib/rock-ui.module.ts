@@ -10,6 +10,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { NavbarComponent } from './navbar/navbar.component';
 import { ButtonCtaComponent } from './button-cta/button-cta.component';
 import { ContentLoaderComponent } from './content-loader/content-loader.component';
+import { GiftWrapComponent } from './gift-wrap/gift-wrap.component';
 
 @NgModule({
   imports: [CommonModule, NgbModule],
@@ -23,6 +24,7 @@ import { ContentLoaderComponent } from './content-loader/content-loader.componen
     NavbarComponent,
     ButtonCtaComponent,
     ContentLoaderComponent,
+    GiftWrapComponent,
   ],
   exports: [
     BannerComponent,
@@ -34,6 +36,7 @@ import { ContentLoaderComponent } from './content-loader/content-loader.componen
     NavbarComponent,
     ButtonCtaComponent,
     ContentLoaderComponent,
+    GiftWrapComponent,
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })

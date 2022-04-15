@@ -37,9 +37,10 @@ export class CartService {
     return this.http
       .get<cartModel.CartProductEntry[]>(this.cartServiceConfig.apiURL)
       .pipe(
-        map((res) => {
-          return res.splice(1, 3);
-        })
+        map((res) => res)
+        // map((res) => {
+        //   return res.splice(1, 3);
+        // })
       );
   }
 }

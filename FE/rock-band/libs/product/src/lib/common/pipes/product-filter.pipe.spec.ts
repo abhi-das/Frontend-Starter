@@ -4,29 +4,41 @@ describe('ProductFilterPipe', () => {
   const qFilterPipe = new ProductFilterPipe();
   const responseList = [
     {
-      id: 1,
-      name: 'Ergonomic Concrete Cheese',
-      description:
-        'The beautiful range of Apple Naturalé that has an exciting mix of natural ingredients. With the Goodness of 100% Natural Ingredients',
+      isAddedToCart: false,
+      product: {
+        id: 1,
+        name: 'Ergonomic Concrete Cheese',
+        description:
+          'The beautiful range of Apple Naturalé that has an exciting mix of natural ingredients. With the Goodness of 100% Natural Ingredients',
+      }
     },
     {
-      id: 2,
-      name: 'Refined Steel Cheese',
-      description:
-        'The automobile layout consists of a front-engine design, with transaxle-type transmissions mounted at the rear of the engine and four wheel drive',
+      isAddedToCart: false,
+      product: {
+        id: 2,
+        name: 'Refined Steel Cheese',
+        description:
+          'The automobile layout consists of a front-engine design, with transaxle-type transmissions mounted at the rear of the engine and four wheel drive',
+      }
     },
     {
-      id: 3,
-      name: 'Restructure Steel Towels',
-      description: 'The automobile layout consists of a front-engine design',
+      isAddedToCart: false,
+      product: {
+        id: 3,
+        name: 'Restructure Steel Towels',
+        description: 'The automobile layout consists of a front-engine design',
+      }
     },
   ];
   const filteredList = [
     {
-      id: 2,
-      name: 'Refined Steel Cheese',
-      description:
-        'The automobile layout consists of a front-engine design, with transaxle-type transmissions mounted at the rear of the engine and four wheel drive',
+      isAddedToCart: false,
+      product: {
+        id: 2,
+        name: 'Refined Steel Cheese',
+        description:
+          'The automobile layout consists of a front-engine design, with transaxle-type transmissions mounted at the rear of the engine and four wheel drive',
+      }
     },
   ];
   it('create an instance', () => {

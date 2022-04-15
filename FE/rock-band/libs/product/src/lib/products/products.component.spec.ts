@@ -17,7 +17,7 @@ describe('ProductsComponent', () => {
       imports: [
         HttpClientModule,
         ProductPipesModule,
-        StoreModule.forRoot({ products: productStore.productReducer }),
+        StoreModule.forRoot({}),
       ],
       schemas: [CUSTOM_ELEMENTS_SCHEMA],
     }).compileComponents();
