@@ -36,11 +36,6 @@ export class ProductService {
   loadProducts(): Observable<productModel.Product[]> {
     return this.http
       .get<productModel.Product[]>(this.productServiceConfig.apiURL)
-      .pipe(
-        map((res) => res)
-        // catchError(() => {
-        //   return throwError('Error on loading products!');
-        // })
-      );
+      .pipe(map((res) => res));
   }
 }

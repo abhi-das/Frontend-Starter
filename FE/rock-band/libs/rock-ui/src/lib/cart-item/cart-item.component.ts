@@ -6,5 +6,6 @@ import { Component, Input } from '@angular/core';
 })
 export class CartItemComponent {
   @Input() label?: string = 'Product Name';
-  @Input() inlineText?: string = 'Price';
+  @Input() quantity?: number = 0;
+  @Input() price?: number = 0;
 }

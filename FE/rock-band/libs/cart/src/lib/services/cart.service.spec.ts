@@ -3,7 +3,11 @@ import {
   HttpClientTestingModule,
   HttpTestingController,
 } from '@angular/common/http/testing';
-import { CartModuleConfig, CartModuleConfigToken, CartService } from './cart.service';
+import {
+  CartModuleConfig,
+  CartModuleConfigToken,
+  CartService,
+} from './cart.service';
 import { of } from 'rxjs';
 
 describe('CartService', () => {
@@ -13,13 +17,15 @@ describe('CartService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [HttpClientTestingModule],
-      providers: [CartService, 
+      providers: [
+        CartService,
         {
-        provide: CartModuleConfigToken,
-        useValue: <Partial<CartModuleConfig>>{
-          apiURL: 'http://localhost:8080/carts',
+          provide: CartModuleConfigToken,
+          useValue: <Partial<CartModuleConfig>>{
+            apiURL: 'http://localhost:8080/carts',
+          },
         },
-      }],
+      ],
     });
     service = TestBed.inject(CartService);
     httpMock = TestBed.inject(HttpTestingController);

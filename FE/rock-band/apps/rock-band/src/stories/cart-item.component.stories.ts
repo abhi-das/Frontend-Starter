@@ -13,5 +13,6 @@ const Template: Story<CartItemComponent> = (args: CartItemComponent) => ({
 export const cartItemComponent = Template.bind({});
 cartItemComponent.args = {
   label: 'Product Name',
-  inlineText: '450$',
+  price: 250,
+  quantity: 1,
 };

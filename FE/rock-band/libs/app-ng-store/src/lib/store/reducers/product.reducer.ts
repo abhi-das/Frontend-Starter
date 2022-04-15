@@ -1,15 +1,16 @@
 import { createEntityAdapter, EntityAdapter, EntityState } from '@ngrx/entity';
 import { createReducer, on } from '@ngrx/store';
-import { Product, ProductData } from '../models/product.model';
+import { Product, ProductData, ProductEntry } from '../models/product.model';
 import { ProductActions } from '../actions';
 
-export interface ProductState extends EntityState<Product> {
+export interface ProductState extends EntityState<ProductEntry> {
   productError?: string;
 }
 
-export const productAdapter: EntityAdapter<Product> =
-  createEntityAdapter<Product>({
-    selectId: (prd) => prd.id + '-' + prd.name.replace(/ /g, ''),
+export const productAdapter: EntityAdapter<ProductEntry> =
+  createEntityAdapter<ProductEntry>({
+    // selectId: (prd) => (prd.product.id * Math.random()) + '-' + prd.product.name.replace(/ /g, ''),
+    selectId: (prd) => prd.product.id,
   });
 
 export const initialProductState = productAdapter.getInitialState({
@@ -39,7 +40,10 @@ export const productReducer = createReducer(
         productError: productLoadingError,
       };
     }
-  )
+  ),
+  on(ProductActions.updateProductSelection, (state: ProductState, action) => {
+    return productAdapter.updateOne(action.update, hasListLoaded(state));
+  })
 );
 
 export const { selectAll } = productAdapter.getSelectors();

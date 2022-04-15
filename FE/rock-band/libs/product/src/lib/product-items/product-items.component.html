@@ -1,11 +1,15 @@
-<ng-container *ngIf="productItm && productItm.length">
+<ng-container *ngIf="productItm">
   <div class="row">
     <ng-container *ngFor="let itm of productItm">
       <div class="col-md-4 pic-holder">
         <rock-product-thumb
-          [imgSrc]="itm.defaultImage"
-          [title]="itm.name"
-        ></rock-product-thumb>
+          [imgSrc]="itm.product.defaultImage"
+          [title]="itm.product.name"
+          [price]="itm.product.price"
+          (ctaHandler)="addToShoppingCart(itm)"
+          [isCtaDisabled]="itm.isAddedToCart"
+        >
+        </rock-product-thumb>
       </div>
     </ng-container>
   </div>

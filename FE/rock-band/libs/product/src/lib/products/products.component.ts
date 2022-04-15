@@ -1,21 +1,24 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import {
   appStore,
   productModel,
   ProductActions,
   productSelector,
+  CartActions,
 } from '@rock-band-ng-store';
-import { map, Observable, tap } from 'rxjs';
+import { map, Observable, Subject, tap } from 'rxjs';
 
 @Component({
   selector: 'rock-band-products',
   templateUrl: './products.component.html',
 })
-export class ProductsComponent implements OnInit {
+export class ProductsComponent implements OnInit, OnDestroy {
   isProductLoading = true;
-  productItm$?: Observable<productModel.Product[]>;
+  productItm$?: Observable<productModel.ProductEntry[]>;
   query?: string;
+
+  private readonly destroy$ = new Subject();
 
   constructor(private _store: Store<appStore.AppState>) {}
 
@@ -34,6 +37,12 @@ export class ProductsComponent implements OnInit {
   }
 
   searchProductHandler(event: any) {
+    console.log(event.currentTarget.value);
     this.query = event.currentTarget.value;
+  }
+
+  ngOnDestroy(): void {
+    this.destroy$.next(0);
+    this.destroy$.complete();
   }
 }

@@ -4,5 +4,4 @@ import { Component } from '@angular/core';
   selector: 'rock-banner',
   templateUrl: './banner.component.html',
 })
-export class BannerComponent {
-}
+export class BannerComponent {}

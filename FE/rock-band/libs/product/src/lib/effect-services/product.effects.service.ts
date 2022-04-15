@@ -5,6 +5,16 @@ import { catchError, concatMap, map } from 'rxjs/operators';
 import { ProductService } from '../services/product.service';
 import { ProductActions, productModel } from '@rock-band-ng-store';
 
+//  TODO: should be part of Utility
+const dataTransformation = (prods: productModel.Product[]) => {
+  return prods.map((prd) => {
+    return {
+      isAddedToCart: false,
+      product: prd,
+    };
+  });
+};
+
 @Injectable({
   providedIn: 'root',
 })
@@ -19,9 +29,11 @@ export class ProductEffectServices {
       concatMap((): Observable<productModel.Product[]> => {
         return this._httpTrans.loadProducts();
       }),
-      map((prods: productModel.Product[]) =>
-        ProductActions.loadProductsSuccessFul({ data: prods })
-      ),
+      map((prods: productModel.Product[]) => {
+        return ProductActions.loadProductsSuccessFul({
+          data: dataTransformation(prods),
+        });
+      }),
       catchError(() => {
         return of(
           ProductActions.loadProductsFailure({

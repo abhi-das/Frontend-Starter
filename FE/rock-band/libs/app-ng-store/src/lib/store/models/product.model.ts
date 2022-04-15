@@ -8,6 +8,11 @@ export interface Product {
   discount?: number;
 }
 
+export interface ProductEntry {
+  isAddedToCart: boolean;
+  product: Product;
+}
+
 export interface ProductData {
-  data: Product[];
+  data: ProductEntry[];
 }

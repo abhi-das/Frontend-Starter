@@ -15,16 +15,6 @@ export const loadProductInCartFailure = createAction(
   props<{ cartError: Partial<ServiceError> }>()
 );
 
-// export const addBulkProductToCartSuccessFul = createAction(
-//   '[Add Bulk Product to Cart] Add Products Successful',
-//   props<{ productItems: Product[] }>()
-// );
-
-// export const addBulkProductToCartFailure = createAction(
-//   '[Add Bulk Product to Cart] Add Products Failure',
-//   props<{ cartError: string }>()
-// );
-
 export const addProductToCartSuccessFul = createAction(
   '[Add Product to Cart] Add Product Successful',
   props<{ productItem: CartProductEntry }>()

@@ -1,7 +1,6 @@
 import { BannerComponent } from '@rock-band-rock-ui';
 import { Story, Meta } from '@storybook/angular';
 
-
 export default {
   title: 'BannerComponent',
   component: BannerComponent,

@@ -1,11 +1,26 @@
-<div class="card">
+<div class="card mb-4">
   <img
     class="card-img-top"
     [src]="imgSrc || 'https://via.placeholder.com/150/'"
     alt="Card image cap"
   />
-  <div class="card-body">
-    <p class="card-text">{{ title }}</p>
-    <button class="btn btn-primary btn-sm" (click)="addToCartHandler($event)"><i class="bi bi-cart3"></i></button>
+  <div class="card-body px-2">
+    <p class="card-text mb-0">{{ title }}</p>
+    <p class="card-text fs-7 mb-1">₹ {{ price }}</p>
+    <div class="text-center">
+      <button class="btn text-primary btn-sm">
+        <i class="bi bi-dash fs-5"></i>
+      </button>
+      <button
+        class="btn text-primary btn-sm"
+        (click)="addToCartHandler($event)"
+        [disabled]="isCtaDisabled"
+      >
+        <i class="bi bi-cart3 fs-5"></i>
+      </button>
+      <button class="btn text-primary btn-sm">
+        <i class="bi bi-plus fs-5"></i>
+      </button>
+    </div>
   </div>
 </div>

@@ -9,7 +9,8 @@ export interface CartState extends EntityState<CartProductEntry> {
 
 export const cartAdapter: EntityAdapter<CartProductEntry> =
   createEntityAdapter<CartProductEntry>({
-    selectId: (cartProductEntry: CartProductEntry) => cartProductEntry.id,
+    selectId: (cartProductEntry: CartProductEntry) =>
+      cartProductEntry.id * Math.random(),
   });
 
 export const initialCartState = cartAdapter.getInitialState({
@@ -40,7 +41,7 @@ export const cartReducer = createReducer(
   on(
     CartActions.addProductToCartSuccessFul,
     (state: CartState, { productItem }) => {
-      return cartAdapter.addOne(productItem, {
+      return cartAdapter.setAll([productItem, ...selectAll(state)], {
         ...state,
         cartError: '',
       });

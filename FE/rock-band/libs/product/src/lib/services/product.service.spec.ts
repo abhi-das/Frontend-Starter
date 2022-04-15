@@ -3,7 +3,11 @@ import {
   HttpClientTestingModule,
   HttpTestingController,
 } from '@angular/common/http/testing';
-import { ProductModuleConfig, ProductModuleConfigToken, ProductService } from './product.service';
+import {
+  ProductModuleConfig,
+  ProductModuleConfigToken,
+  ProductService,
+} from './product.service';
 
 describe('ProductService', () => {
   let service: ProductService;
@@ -12,13 +16,14 @@ describe('ProductService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [HttpClientTestingModule],
-      providers: [ProductService,
+      providers: [
+        ProductService,
         {
           provide: ProductModuleConfigToken,
           useValue: <Partial<ProductModuleConfig>>{
             apiURL: 'http://localhost:8080/products?_page=1&_limit=6',
           },
-        }
+        },
       ],
     });
     service = TestBed.inject(ProductService);

@@ -10,7 +10,7 @@ export class ProductFilterPipe implements PipeTransform {
     args = args.trim().toLowerCase();
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     return value.filter((val: any) =>
-      val.name.toLowerCase().includes(args.toLowerCase())
+      val.product.name.toLowerCase().includes(args.toLowerCase())
     );
   }
 }

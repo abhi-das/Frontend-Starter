@@ -3,8 +3,9 @@
     <ng-container *ngFor="let cItm of cartItms">
       <ng-container *ngFor="let prds of cItm.products">
         <rock-cart-item
-          label="{{ prds.name }}"
-          inlineText="{{ prds.quantity }}"
+          [label]="prds.name"
+          [quantity]="prds.quantity"
+          [price]="prds.price"
         ></rock-cart-item>
       </ng-container>
     </ng-container>

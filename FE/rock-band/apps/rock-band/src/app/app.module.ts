@@ -6,9 +6,21 @@ import { RouterModule, Routes } from '@angular/router';
 import { EffectsModule } from '@ngrx/effects';
 import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
-import { CartComponent, CartEffectServices, CartModule, CartModuleConfig, CartModuleConfigToken } from '@rock-band-cart';
+import {
+  CartComponent,
+  CartEffectServices,
+  CartModule,
+  CartModuleConfig,
+  CartModuleConfigToken,
+} from '@rock-band-cart';
 import { cartStore, productStore } from '@rock-band-ng-store';
-import { ProductEffectServices, ProductModule, ProductModuleConfig, ProductModuleConfigToken, ProductsComponent } from '@rock-band-product';
+import {
+  ProductEffectServices,
+  ProductModule,
+  ProductModuleConfig,
+  ProductModuleConfigToken,
+  ProductsComponent,
+} from '@rock-band-product';
 import { PageNotFoundComponent, RockUiModule } from '@rock-band-rock-ui';
 import { HttpErrorInterceptor } from '@rock-band/rock-band-common';
 import { environment } from '../environments/environment';
@@ -42,7 +54,6 @@ const routes: Routes = [
     pathMatch: 'full',
   },
 ];
-
 
 @NgModule({
   declarations: [AppComponent],
@@ -79,14 +90,15 @@ const routes: Routes = [
     {
       provide: HTTP_INTERCEPTORS,
       useClass: HttpErrorInterceptor,
-      multi: true
+      multi: true,
     },
     Location,
     {
-      provide: LocationStrategy, useClass: PathLocationStrategy
-    }
+      provide: LocationStrategy,
+      useClass: PathLocationStrategy,
+    },
   ],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
-export class AppModule { }
+export class AppModule {}

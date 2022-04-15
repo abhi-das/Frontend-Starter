@@ -1,4 +1,12 @@
-<div class="d-flex">
-  <p class="w-75">{{ label }}</p>
-  <p class="flex-shrink-1">{{ inlineText }}</p>
+<p class="fs-7 fw-bold mb-2">{{ label }}</p>
+
+<div class="row g-0 mb-3 bg-light">
+  <div class="col-sm-3 p-2">
+    <p class="fs-7 fw-bold mb-2">Quantity</p>
+    <p class="fs-7 fw-bold mb-0">Price</p>
+  </div>
+  <div class="col-sm-9 p-2">
+    <p class="fs-7 mb-2">{{ quantity }}</p>
+    <p class="fs-7 mb-0">₹ {{ price }}</p>
+  </div>
 </div>

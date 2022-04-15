@@ -17,7 +17,7 @@ describe('CartComponent', () => {
         HttpClientModule,
         StoreModule.forRoot({ cart: cartStore.cartReducer }),
       ],
-      schemas: [CUSTOM_ELEMENTS_SCHEMA]
+      schemas: [CUSTOM_ELEMENTS_SCHEMA],
     }).compileComponents();
   });
 

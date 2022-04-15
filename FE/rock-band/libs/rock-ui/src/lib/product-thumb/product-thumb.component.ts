@@ -7,9 +7,11 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 export class ProductThumbComponent {
   @Input() imgSrc?: string;
   @Input() title?: string;
-  @Output() ctaHandler: EventEmitter<any> = new EventEmitter();
+  @Input() price?: number;
+  @Input() isCtaDisabled: boolean = false;
+  @Output() ctaHandler: EventEmitter<any> = new EventEmitter<any>();
 
-  addToCartHandler(event: Event): void {
-    this.ctaHandler.emit(event);
+  addToCartHandler(product: any): void {
+    this.ctaHandler.emit(product);
   }
 }

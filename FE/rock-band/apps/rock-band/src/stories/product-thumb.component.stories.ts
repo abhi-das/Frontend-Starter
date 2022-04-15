@@ -6,7 +6,9 @@ export default {
   component: ProductThumbComponent,
   argTypes: {},
 } as Meta;
-const Template: Story<ProductThumbComponent> = (args: ProductThumbComponent) => ({
+const Template: Story<ProductThumbComponent> = (
+  args: ProductThumbComponent
+) => ({
   component: ProductThumbComponent,
   props: args,
 });

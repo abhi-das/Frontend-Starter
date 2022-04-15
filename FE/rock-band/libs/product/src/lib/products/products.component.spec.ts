@@ -19,7 +19,7 @@ describe('ProductsComponent', () => {
         ProductPipesModule,
         StoreModule.forRoot({ products: productStore.productReducer }),
       ],
-      schemas: [CUSTOM_ELEMENTS_SCHEMA]
+      schemas: [CUSTOM_ELEMENTS_SCHEMA],
     }).compileComponents();
   });
 
