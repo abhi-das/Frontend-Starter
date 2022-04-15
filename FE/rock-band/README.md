@@ -4,11 +4,13 @@ Features Enabled:
 
 - Modularize App Structure
 - Typescript Enabled
-- NgRx Store Implementation
+- Advance NgRx Store Implementation (using EntityAdapter, EntityState etc.)
 - Ng-bootstrap Enabled
 - Advance Angular features implementation (@Inject, Token etc)
 - Custom Angular Pipe Module (ProductPipesModule) implementated
+- Auxiliary Routing implemnetation for individual angular modules
 - Custom Http Error Handing using HttpInterceptor
+- Using environment variables for external API endpoints
 - Git Actions for CI/CD Pipelines
 - Code Coverage Enabled for Each Angular Modules
 - Application Theme Structured
@@ -42,6 +44,10 @@ Navigate to `Frontend-Starter\FE\rock-band` folder
 - Run Lint and Prettier
   - `yarn rock:lint`
   - `yarn rock:format`
+
+### Module-wise Error Handing
+
+<img src="./git_assets/error-handing.png" width="45%"/>
 
 ### Code Coverage Report
 

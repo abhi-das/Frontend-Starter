@@ -16,4 +16,5 @@ export const productThumbComponent = Template.bind({});
 productThumbComponent.args = {
   imgSrc: 'http://placeimg.com/50/50/cats',
   title: 'Rustic Concrete Chair',
+  price: 421
 };

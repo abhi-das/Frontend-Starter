@@ -11,3 +11,6 @@ const Template: Story<SearchComponent> = (args: SearchComponent) => ({
   props: args,
 });
 export const searchComponent = Template.bind({});
+searchComponent.args = {
+  placeholderText: 'search products...',
+};
