@@ -1,9 +1,10 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-  name: 'productFilter',
+  name: 'productFilter'
 })
 export class ProductFilterPipe implements PipeTransform {
+
   transform(value: any, args?: any): any {
     if (!Array.isArray(value)) return null;
     if (!args) return value;
@@ -13,4 +14,5 @@ export class ProductFilterPipe implements PipeTransform {
       val.product.name.toLowerCase().includes(args.toLowerCase())
     );
   }
+
 }

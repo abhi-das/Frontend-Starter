@@ -54,6 +54,10 @@ Navigate to `Frontend-Starter\FE\rock-band` folder
 <img src="./git_assets/cart-code-coverage.png" width="45%"/>
 <img src="./git_assets/product-code-coverage.png" width="45%"/>
 
+### Lighthouse Report
+
+<img src="./git_assets/lighthouse-report.png" width="50%"/>
+
 ### Storybook Feature
 
 <img src="./git_assets/storybook-view.png" width="45%"/>
