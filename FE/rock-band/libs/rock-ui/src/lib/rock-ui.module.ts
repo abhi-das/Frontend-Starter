@@ -11,6 +11,8 @@ import { ButtonCtaComponent } from './button-cta/button-cta.component';
 import { ContentLoaderComponent } from './content-loader/content-loader.component';
 import { GiftWrapComponent } from './gift-wrap/gift-wrap.component';
 import { RouterModule } from '@angular/router';
+import { NotificationAlertComponent } from './notification-alert/notification-alert.component';
+import { NotificationAlertService } from './services/notification-alert.service';
 
 @NgModule({
   imports: [CommonModule, NgbModule, RouterModule],
@@ -24,6 +26,7 @@ import { RouterModule } from '@angular/router';
     ButtonCtaComponent,
     ContentLoaderComponent,
     GiftWrapComponent,
+    NotificationAlertComponent,
   ],
   exports: [
     BannerComponent,
@@ -35,7 +38,9 @@ import { RouterModule } from '@angular/router';
     ButtonCtaComponent,
     ContentLoaderComponent,
     GiftWrapComponent,
+    NotificationAlertComponent,
   ],
+  providers: [NotificationAlertService],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class RockUiModule {}

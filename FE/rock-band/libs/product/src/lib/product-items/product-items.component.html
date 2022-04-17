@@ -1,3 +1,9 @@
+<ng-template #addToCartTemplate>
+  <h5 class="fs-6">
+    {{ updatedProd.product.name }}
+    <span>added to <i class="bi bi-basket-fill text-info"></i></span>
+  </h5>
+</ng-template>
 <ng-container *ngIf="productItm">
   <div class="row">
     <ng-container *ngFor="let itm of productItm">
@@ -6,7 +12,7 @@
           [imgSrc]="itm.product.defaultImage"
           [title]="itm.product.name"
           [price]="itm.product.price"
-          (ctaHandler)="addToShoppingCart(itm)"
+          (ctaHandler)="addToShoppingCart(itm, addToCartTemplate)"
           [isCtaDisabled]="itm.isAddedToCart"
         >
         </rock-product-thumb>

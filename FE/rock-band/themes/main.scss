@@ -1,5 +1,10 @@
+@import './scss/generics/variables';
 @import './scss/generics/font-faces';
+@import './scss/components/content-loader';
 
 .fs-7 {
   font-size: 0.7rem;
+}
+.r-10 {
+  right: 10em;
 }

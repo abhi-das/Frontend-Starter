@@ -17,3 +17,7 @@ export * from './lib/content-loader/content-loader.component';
 export * from './lib/gift-wrap/gift-wrap.component';
 
 export * from './lib/navbar/navbar.component';
+
+export * from './lib/notification-alert/notification-alert.component';
+
+export * from './lib/services/notification-alert.service';
