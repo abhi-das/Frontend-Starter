@@ -16,6 +16,7 @@ Features Enabled:
 - Application Theme Structured
 - Storybook Enabled
 - Dockerize Implementation
+- Web Content Accessibility Guidelines (WCAG) Compliant
 
 ### Product and Shopping Cart Modules Layout
 
@@ -25,12 +26,18 @@ Features Enabled:
 
 ### Project Script Guide:
 
-Navigate to `Frontend-Starter\FE\rock-band` folder
+Navigate to `Frontend-Starter\BE` folder for Backend Mock Services
+
+- Run Development Environment
+  - `yarn start`
+
+Navigate to `Frontend-Starter\FE\rock-band` folder for Angular Application
 
 - Setup Application
   - `yarn install`
 - Run Development Environment
   - `yarn rock:dev`
+  - Once server up, browse the site on http://localhost:4100
 - Run Storybook
   - `yarn rock:storybook`
 - Run Tests
