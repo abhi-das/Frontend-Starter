@@ -8,6 +8,7 @@ import { AuthEffectService } from './effect-services/auth.effect.service';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AuthGuardService } from './services/auth.guard.service';
+import { RockUiModule } from '@rock-band-rock-ui';
 
 const authRoutes: Routes = [
 	{
@@ -21,7 +22,7 @@ const authRoutes: Routes = [
 ];
 
 @NgModule({
-	imports: [CommonModule, ReactiveFormsModule, HttpClientModule, RouterModule.forChild(authRoutes)],
+	imports: [CommonModule, ReactiveFormsModule, RockUiModule, HttpClientModule, RouterModule.forChild(authRoutes)],
 	declarations: [ProfileComponent, LoginComponent],
 	exports: [ProfileComponent, LoginComponent],
 	providers: [AuthService, AuthEffectService, AuthGuardService],
