@@ -10,6 +10,7 @@ Features Enabled:
 - Advance Angular features implementation (@Inject, Token, etc)
 - Custom Angular Pipe Module (ProductPipesModule) implemented
 - Auxiliary Routing implementation for individual angular modules
+- Authentication Module Implmentation (including Auth Gard for protected routes)
 - Browser Refresh Implications and implementation of PathLocationStrategy
 - Custom HTTP Error Handing using HttpInterceptor
 - Using environment variables for external API endpoints
@@ -19,6 +20,10 @@ Features Enabled:
 - Storybook Enabled
 - Dockerize Implementation
 - Web Content Accessibility Guidelines (WCAG) Compliant
+
+### Login Module Layout
+
+<img src="./git_assets/login-view.png" width="75%"/>
 
 ### Product and Shopping Cart Modules Layout
 
