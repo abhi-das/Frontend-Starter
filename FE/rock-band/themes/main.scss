@@ -3,8 +3,13 @@
 @import './scss/components/content-loader';
 
 .fs-7 {
-  font-size: 0.7rem;
+	font-size: 0.7rem;
 }
-.r-10 {
-  right: 10em;
+.notification {
+	left: auto;
+	top: 5em;
+	right: 10em;
+}
+.text-right {
+	text-align: right;
 }

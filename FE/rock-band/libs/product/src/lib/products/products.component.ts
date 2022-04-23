@@ -1,47 +1,39 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
-import {
-  appStore,
-  productModel,
-  ProductActions,
-  productSelector,
-  CartActions,
-} from '@rock-band-ng-store';
+import { appStore, productModel, ProductActions, productSelector, CartActions } from '@rock-band-ng-store';
 import { map, Observable, Subject, tap } from 'rxjs';
 
 @Component({
-  selector: 'rock-band-products',
-  templateUrl: './products.component.html',
+	selector: 'rock-band-products',
+	templateUrl: './products.component.html',
 })
 export class ProductsComponent implements OnInit, OnDestroy {
-  isProductLoading = true;
-  productItm$?: Observable<productModel.ProductEntry[]>;
-  query?: string;
+	isProductLoading = true;
+	productItm$?: Observable<productModel.ProductEntry[]>;
+	query?: string;
 
-  private readonly destroy$ = new Subject();
+	private readonly destroy$ = new Subject();
 
-  constructor(private _store: Store<appStore.AppState>) {}
+	constructor(private _store: Store<appStore.AppState>) {}
 
-  ngOnInit(): void {
-    this._store.dispatch(ProductActions.loadProducts());
+	ngOnInit(): void {
+		this._store.dispatch(ProductActions.loadProducts());
 
-    this.productItm$ = this._store
-      .select(productSelector.productSelectAll)
-      .pipe(
-        tap((res) => {
-          if (res.length) {
-            this.isProductLoading = false;
-          }
-        })
-      );
-  }
+		this.productItm$ = this._store.select(productSelector.productSelectAll).pipe(
+			tap((res) => {
+				if (res.length) {
+					this.isProductLoading = false;
+				}
+			})
+		);
+	}
 
-  searchProductHandler(event: any) {
-    this.query = event.currentTarget.value;
-  }
+	searchProductHandler(event: any) {
+		this.query = event.currentTarget.value;
+	}
 
-  ngOnDestroy(): void {
-    this.destroy$.next(0);
-    this.destroy$.complete();
-  }
+	ngOnDestroy(): void {
+		this.destroy$.next(0);
+		this.destroy$.complete();
+	}
 }

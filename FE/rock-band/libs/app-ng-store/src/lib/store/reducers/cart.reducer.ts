@@ -4,55 +4,50 @@ import { CartActions } from '../actions';
 import { CartProductEntry, ServiceError } from '../models/cart.model';
 
 export interface CartState extends EntityState<CartProductEntry> {
-  cartError?: Partial<ServiceError>;
+	cartError?: Partial<ServiceError>;
 }
 
-export const cartAdapter: EntityAdapter<CartProductEntry> =
-  createEntityAdapter<CartProductEntry>({
-    selectId: (cartProductEntry: CartProductEntry) =>
-      cartProductEntry.id * Math.random(),
-  });
+export const cartAdapter: EntityAdapter<CartProductEntry> = createEntityAdapter<CartProductEntry>({
+	selectId: (cartProductEntry: CartProductEntry) => cartProductEntry.id,
+});
 
 export const initialCartState = cartAdapter.getInitialState({
-  cartError: {},
+	cartError: {},
 });
 
 const hasListLoaded = (state: CartState) => {
-  return {
-    ...state,
-    cartError: '',
-  };
+	return {
+		...state,
+		cartError: '',
+	};
 };
 
 export const cartReducer = createReducer(
-  initialCartState,
-  on(CartActions.loadProductInCartSuccessFul, (state: CartState, { data }) => {
-    return cartAdapter.addMany(data, hasListLoaded(state));
-  }),
-  on(
-    CartActions.loadProductInCartFailure,
-    (state: CartState, { cartError }) => {
-      return {
-        ...state,
-        cartError: cartError,
-      };
-    }
-  ),
-  on(
-    CartActions.addProductToCartSuccessFul,
-    (state: CartState, { productItem }) => {
-      return cartAdapter.setAll([productItem, ...selectAll(state)], {
-        ...state,
-        cartError: '',
-      });
-    }
-  ),
-  on(CartActions.addProductToCartFailure, (state: CartState, { cartError }) => {
-    return {
-      ...state,
-      cartError,
-    };
-  })
+	initialCartState,
+	on(CartActions.loadProductInCartSuccessFul, (state: CartState, { data }) => {
+		return cartAdapter.addMany(data, hasListLoaded(state));
+	}),
+	on(CartActions.loadProductInCartFailure, (state: CartState, { cartError }) => {
+		return {
+			...state,
+			cartError: cartError,
+		};
+	}),
+	on(CartActions.addProductToCartSuccessFul, (state: CartState, { productItem }) => {
+		return cartAdapter.setAll([productItem, ...selectAll(state)], {
+			...state,
+			cartError: '',
+		});
+	}),
+	on(CartActions.addProductToCartFailure, (state: CartState, { cartError }) => {
+		return {
+			...state,
+			cartError,
+		};
+	}),
+	on(CartActions.updateCartItemQuantity, (state: CartState, action) => {
+		return cartAdapter.updateOne(action.update, hasListLoaded(state));
+	})
 );
 
 export const { selectAll } = cartAdapter.getSelectors();

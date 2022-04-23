@@ -1,4 +1,4 @@
-import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, ModuleWithProviders, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BannerComponent } from './banner/banner.component';
@@ -12,35 +12,37 @@ import { ContentLoaderComponent } from './content-loader/content-loader.componen
 import { GiftWrapComponent } from './gift-wrap/gift-wrap.component';
 import { RouterModule } from '@angular/router';
 import { NotificationAlertComponent } from './notification-alert/notification-alert.component';
-import { NotificationAlertService } from './services/notification-alert.service';
+import { RockBandCommonModule } from '@rock-band-common';
+import { DropdownComponent } from './dropdown/dropdown.component';
 
 @NgModule({
-  imports: [CommonModule, NgbModule, RouterModule],
-  declarations: [
-    BannerComponent,
-    SearchComponent,
-    ProductThumbComponent,
-    CartItemComponent,
-    PageNotFoundComponent,
-    NavbarComponent,
-    ButtonCtaComponent,
-    ContentLoaderComponent,
-    GiftWrapComponent,
-    NotificationAlertComponent,
-  ],
-  exports: [
-    BannerComponent,
-    SearchComponent,
-    ProductThumbComponent,
-    CartItemComponent,
-    PageNotFoundComponent,
-    NavbarComponent,
-    ButtonCtaComponent,
-    ContentLoaderComponent,
-    GiftWrapComponent,
-    NotificationAlertComponent,
-  ],
-  providers: [NotificationAlertService],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA],
+	imports: [CommonModule, NgbModule, RouterModule, RockBandCommonModule],
+	declarations: [
+		BannerComponent,
+		SearchComponent,
+		ProductThumbComponent,
+		CartItemComponent,
+		PageNotFoundComponent,
+		NavbarComponent,
+		ButtonCtaComponent,
+		ContentLoaderComponent,
+		GiftWrapComponent,
+		NotificationAlertComponent,
+		DropdownComponent,
+	],
+	exports: [
+		BannerComponent,
+		SearchComponent,
+		ProductThumbComponent,
+		CartItemComponent,
+		PageNotFoundComponent,
+		NavbarComponent,
+		ButtonCtaComponent,
+		ContentLoaderComponent,
+		GiftWrapComponent,
+		NotificationAlertComponent,
+		DropdownComponent,
+	],
+	schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class RockUiModule {}

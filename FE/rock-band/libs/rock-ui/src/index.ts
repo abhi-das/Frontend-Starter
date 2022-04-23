@@ -20,4 +20,4 @@ export * from './lib/navbar/navbar.component';
 
 export * from './lib/notification-alert/notification-alert.component';
 
-export * from './lib/services/notification-alert.service';
+export * from './lib/dropdown/dropdown.component';

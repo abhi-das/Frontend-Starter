@@ -4,11 +4,13 @@ Features Enabled:
 
 - Modularize App Structure
 - Typescript Enabled
+- Mono Repo Implementation
 - Advance NgRx Store Implementation (using EntityAdapter, EntityState, etc.)
 - Ng-bootstrap Enabled
 - Advance Angular features implementation (@Inject, Token, etc)
 - Custom Angular Pipe Module (ProductPipesModule) implemented
 - Auxiliary Routing implementation for individual angular modules
+- Browser Refresh Implications and implementation of PathLocationStrategy
 - Custom HTTP Error Handing using HttpInterceptor
 - Using environment variables for external API endpoints
 - Git Actions for CI/CD Pipelines
