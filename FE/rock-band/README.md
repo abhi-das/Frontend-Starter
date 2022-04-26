@@ -23,15 +23,15 @@ Features Enabled:
 
 ### Login Module Layout
 
-<img src="./git_assets/login-view.png" width="75%"/>
+<img src="./git_assets/login-view.png" width="50%"/>
 
 ### Product Modules Layout
 
-<img src="./git_assets/prd-view.png" width="75%"/>
+<img src="./git_assets/prd-view.png" width="50%"/>
 
 ### Cart Modules Layout
 
-<img src="./git_assets/cart-view.png" width="75%"/>
+<img src="./git_assets/cart-view.png" width="50%"/>
 
 ---
 
@@ -46,9 +46,12 @@ Navigate to `Frontend-Starter\FE\rock-band` folder for Angular Application
 
 - Setup Application
   - `yarn install`
-- Run Development Environment
+- Run Retail Customer Application
   - `yarn rock:dev`
   - Once server up, browse the site on http://localhost:4100
+- Run Admin Application
+  - `yarn radmin:dev`
+  - Once server up, browse the site on http://localhost:4200
 - Run Storybook
   - `yarn rock:storybook`
 - Run Tests
@@ -75,6 +78,14 @@ Navigate to `Frontend-Starter\FE\rock-band` folder for Angular Application
 ### Lighthouse Report
 
 <img src="./git_assets/lighthouse-report.png" width="50%"/>
+
+### Admin - Inventory Module Layout
+
+<img src="./git_assets/admin-inventory-view.png" width="50%"/>
+
+### Admin - Inventory Edit Product Layout
+
+<img src="./git_assets/admin-inventory-edit-view.png" width="50%"/>
 
 ### Storybook Feature
 
