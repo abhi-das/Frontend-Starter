@@ -18,7 +18,9 @@
 		"rock:cc": "coverage/apps/rock-band/index.html -o",
 		"rock:cart:cc": "coverage/libs/cart/index.html -o",
 		"rock:product:cc": "coverage/libs/product/index.html -o",
-		"radmin:dev": "ng serve --project=rock-band-admin --port 4200"
+		"radmin:dev": "ng serve --project=rock-band-admin --port 4200",
+		"radmin:test": "ng test --project=rock-band-admin --browsers=ChromeHeadless --watch=false --code-coverage",
+		"radmin:cc": "coverage/apps/rock-band-admin/index.html -o"
 	},
 	"private": true,
 	"dependencies": {

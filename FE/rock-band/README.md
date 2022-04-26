@@ -25,11 +25,11 @@ Features Enabled:
 
 <img src="./git_assets/login-view.png" width="50%"/>
 
-### Product Modules Layout
+### Product Module Layout
 
 <img src="./git_assets/prd-view.png" width="50%"/>
 
-### Cart Modules Layout
+### Cart Module Layout
 
 <img src="./git_assets/cart-view.png" width="50%"/>
 
@@ -54,14 +54,18 @@ Navigate to `Frontend-Starter\FE\rock-band` folder for Angular Application
   - Once server up, browse the site on http://localhost:4200
 - Run Storybook
   - `yarn rock:storybook`
-- Run Tests
+- Run Tests for Retail Customer Application
   - `yarn rock:test`
   - `yarn rock:cart:test`
   - `yarn rock:product:test`
-- View Code Coverage of the Application
+- View Code Coverage of the Retail Customer Application
   - `yarn rock:cc`
   - `yarn rock:cart:cc`
   - `yarn rock:product:cc`
+- Run Tests for Admin Application
+  - `yarn radmin:test`
+- View Code Coverage of the Admin Application
+  - `radmin:cc`
 - Run Lint and Prettier
   - `yarn rock:lint`
   - `yarn rock:format`
@@ -86,6 +90,10 @@ Navigate to `Frontend-Starter\FE\rock-band` folder for Angular Application
 ### Admin - Inventory Edit Product Layout
 
 <img src="./git_assets/admin-inventory-edit-view.png" width="50%"/>
+
+### Admin - Code Coverage
+
+<img src="./git_assets/admin-code-coverage.png" width="50%"/>
 
 ### Storybook Feature
 
