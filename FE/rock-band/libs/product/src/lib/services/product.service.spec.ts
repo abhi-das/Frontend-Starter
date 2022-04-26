@@ -14,7 +14,7 @@ describe('ProductService', () => {
 				{
 					provide: ProductModuleConfigToken,
 					useValue: <Partial<ProductModuleConfig>>{
-						apiURL: 'http://localhost:8080/products?_page=1&_limit=6',
+						apiURL: 'http://localhost:8080/products',
 					},
 				},
 			],

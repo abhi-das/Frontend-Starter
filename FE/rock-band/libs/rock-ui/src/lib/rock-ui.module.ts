@@ -14,9 +14,14 @@ import { RouterModule } from '@angular/router';
 import { NotificationAlertComponent } from './notification-alert/notification-alert.component';
 import { RockBandCommonModule } from '@rock-band-common';
 import { DropdownComponent } from './dropdown/dropdown.component';
+import { CardInfoComponent } from './card-info/card-info.component';
+import { ProductsTableComponent } from './products-table/products-table.component';
+import { UsersTableComponent } from './users-table/users-table.component';
+import { ProductFormComponent } from './product-form/product-form.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
-	imports: [CommonModule, NgbModule, RouterModule, RockBandCommonModule],
+	imports: [CommonModule, NgbModule, RouterModule, RockBandCommonModule, ReactiveFormsModule],
 	declarations: [
 		BannerComponent,
 		SearchComponent,
@@ -29,6 +34,10 @@ import { DropdownComponent } from './dropdown/dropdown.component';
 		GiftWrapComponent,
 		NotificationAlertComponent,
 		DropdownComponent,
+		CardInfoComponent,
+		ProductsTableComponent,
+		UsersTableComponent,
+		ProductFormComponent,
 	],
 	exports: [
 		BannerComponent,
@@ -42,6 +51,10 @@ import { DropdownComponent } from './dropdown/dropdown.component';
 		GiftWrapComponent,
 		NotificationAlertComponent,
 		DropdownComponent,
+		CardInfoComponent,
+		ProductsTableComponent,
+		UsersTableComponent,
+		ProductFormComponent,
 	],
 	schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })

@@ -1,4 +1,6 @@
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { StoreModule } from '@ngrx/store';
 
 import { ProductItemComponent } from './product-item.component';
 
@@ -9,6 +11,8 @@ describe('ProductItemComponent', () => {
 	beforeEach(async () => {
 		await TestBed.configureTestingModule({
 			declarations: [ProductItemComponent],
+			imports:[StoreModule.forRoot({})],
+			schemas:[CUSTOM_ELEMENTS_SCHEMA]
 		}).compileComponents();
 	});
 

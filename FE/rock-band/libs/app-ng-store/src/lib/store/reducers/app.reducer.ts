@@ -8,6 +8,7 @@ export interface AppState {
 	auth?: AuthState;
 	products?: ProductState;
 	cart?: CartState;
+	users?: any;
 }
 
 export const appReducer: ActionReducerMap<AppState> = {};

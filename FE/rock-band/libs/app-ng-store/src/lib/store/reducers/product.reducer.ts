@@ -28,14 +28,26 @@ export const productReducer = createReducer(
 	on(ProductActions.loadProductsSuccessFul, (state: ProductState, action: ProductData) => {
 		return productAdapter.addMany(action.data, hasListLoaded(state));
 	}),
-	on(ProductActions.loadProductsFailure, (state: ProductState, { productLoadingError }) => {
+	on(ProductActions.loadProductsFailure, (state: ProductState, { productError }) => {
 		return {
 			...state,
-			productError: productLoadingError,
+			productError: productError,
 		};
 	}),
 	on(ProductActions.updateProductSelection, (state: ProductState, action) => {
 		return productAdapter.updateOne(action.update, hasListLoaded(state));
+	}),
+	on(ProductActions.removeProductFromCart, (state: ProductState, { productId }) => {
+		return productAdapter.removeOne(productId, hasListLoaded(state));
+	}),
+	on(ProductActions.addProductToInventorySuccessFul, (state: ProductState, { productItem }) => {
+		return productAdapter.setAll([productItem, ...selectAll(state)], hasListLoaded(state));
+	}),
+	on(ProductActions.addProductToInventoryFailure, (state: ProductState, { productError }) => {
+		return {
+			...state,
+			productError: productError,
+		};
 	})
 );
 

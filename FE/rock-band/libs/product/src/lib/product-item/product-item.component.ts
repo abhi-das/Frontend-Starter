@@ -26,27 +26,18 @@ export class ProductItemComponent implements OnInit {
 	}
 
 	addToShoppingCart(prdItem: productModel.ProductEntry, addToCartTemplateRef: TemplateRef<any>): void {
-		const cartItm = {
-			id: prdItem.product.id,
-			products: [
-				{
-					id: prdItem.product.id,
-					name: prdItem.product.name,
-					price: prdItem.product.price,
-					quantity: 1,
-				},
-			],
-		};
 		this.updatedProd = {
 			...prdItem,
 			isAddedToCart: true,
 		};
 		this._store.dispatch(
 			ProductActions.updateProductSelection({
-				update: { id: prdItem.product.id, changes: this.updatedProd },
+				update: { id: String(prdItem.product.id), changes: this.updatedProd },
 			})
 		);
-		this._store.dispatch(CartActions.addProductToCartSuccessFul({ productItem: cartItm }));
+		this._store.dispatch(
+			CartActions.addProductToCartSuccessFul({ productItem: CartActions.createNewCartItem(prdItem) })
+		);
 		this._notification.showNotificationAlert(addToCartTemplateRef, {
 			classname: 'bg-light',
 			delay: 2000,
@@ -55,21 +46,9 @@ export class ProductItemComponent implements OnInit {
 	}
 
 	changeQuantityInCart(q: string, prdItem: productModel.ProductEntry): void {
-		const cartItm = {
-			id: prdItem.product.id,
-			products: [
-				{
-					id: prdItem.product.id,
-					name: prdItem.product.name,
-					price: prdItem.product.price,
-					quantity: parseInt(q),
-				},
-			],
-		};
-
 		this._store.dispatch(
 			CartActions.updateCartItemQuantity({
-				update: { id: prdItem.product.id, changes: cartItm },
+				update: { id: prdItem.product.id, changes: CartActions.createNewCartItem(prdItem, parseInt(q)) },
 			})
 		);
 	}

@@ -15,6 +15,13 @@ const dataTransformation = (prods: productModel.Product[]) => {
 	});
 };
 
+const dataTransformationForOne = (prod: productModel.Product) => {
+	return {
+		isAddedToCart: false,
+		product: prod,
+	};
+};
+
 @Injectable({
 	providedIn: 'root',
 })
@@ -37,7 +44,29 @@ export class ProductEffectServices {
 			catchError(() => {
 				return of(
 					ProductActions.loadProductsFailure({
-						productLoadingError: 'Error on loading products!',
+						productError: 'Error on loading products!',
+					})
+				);
+			})
+		);
+	});
+
+	uploadNewProductEffect = createEffect(() => {
+		return this._actions.pipe(
+			ofType(ProductActions.addProductToInventory),
+			// ConcatMap for call API once
+			concatMap((action): Observable<productModel.Product> => {
+				return this._httpTrans.uploadNewProduct(action.productItem);
+			}),
+			map((prod: productModel.Product) => {
+				return ProductActions.addProductToInventorySuccessFul({
+					productItem: dataTransformationForOne(prod),
+				});
+			}),
+			catchError(() => {
+				return of(
+					ProductActions.addProductToInventoryFailure({
+						productError: 'Error on loading products!',
 					})
 				);
 			})

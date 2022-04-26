@@ -1,7 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
-import { appStore, productModel, ProductActions, productSelector, CartActions } from '@rock-band-ng-store';
-import { map, Observable, Subject, tap } from 'rxjs';
+import { appStore, productModel, ProductActions, productSelector } from '@rock-band-ng-store';
+import { Observable, Subject, tap } from 'rxjs';
 
 @Component({
 	selector: 'rock-band-products',

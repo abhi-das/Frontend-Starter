@@ -5,8 +5,7 @@ import { Observable } from 'rxjs';
 
 @Component({
 	selector: 'rock-band-site-header',
-	templateUrl: './site-header.component.html',
-	styles: [],
+	templateUrl: './site-header.component.html'
 })
 export class SiteHeaderComponent implements OnInit {
 	isLoggedIn!: Observable<boolean | undefined>;

@@ -6,8 +6,9 @@
 	[productQuantity]="qNum"
 	(ctaHandler)="addToShoppingCart(productItem, addToCartTemplate)"
 	(quantityHandler)="changeQuantityInCart($event, productItem)"
-	[isCtaDisabled]="productItem.isAddedToCart"
+	[isCtaDisabled]="productItem.isAddedToCart || false"
 >
+	<!-- TODO: isCtaDisabled-->
 </rock-product-thumb>
 
 <ng-template #addToCartTemplate>

@@ -4,12 +4,11 @@ Features Enabled:
 
 - Modularize App Structure
 - Typescript Enabled
-- Mono Repo Implementation
+- Mono Repo Architecture
 - Advance NgRx Store Implementation (using EntityAdapter, EntityState, etc.)
-- Ng-bootstrap Enabled
+- Ng-bootstrap and Bootstrap library integration
 - Advance Angular features implementation (@Inject, Token, etc)
 - Custom Angular Pipe Module (ProductPipesModule) implemented
-- Auxiliary Routing implementation for individual angular modules
 - Authentication Module Implmentation (including Auth Gard for protected routes)
 - Browser Refresh Implications and implementation of PathLocationStrategy
 - Custom HTTP Error Handing using HttpInterceptor
@@ -20,14 +19,19 @@ Features Enabled:
 - Storybook Enabled
 - Dockerize Implementation
 - Web Content Accessibility Guidelines (WCAG) Compliant
+- Shopping Cart Admin Panel Feature Enabled (Inventory Module Only for now)
 
 ### Login Module Layout
 
 <img src="./git_assets/login-view.png" width="75%"/>
 
-### Product and Shopping Cart Modules Layout
+### Product Modules Layout
 
 <img src="./git_assets/prd-view.png" width="75%"/>
+
+### Cart Modules Layout
+
+<img src="./git_assets/cart-view.png" width="75%"/>
 
 ---
 

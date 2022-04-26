@@ -17,7 +17,8 @@
 		"rock:product:test": "nx run product:test --watch=false --code-coverage",
 		"rock:cc": "coverage/apps/rock-band/index.html -o",
 		"rock:cart:cc": "coverage/libs/cart/index.html -o",
-		"rock:product:cc": "coverage/libs/product/index.html -o"
+		"rock:product:cc": "coverage/libs/product/index.html -o",
+		"radmin:dev": "ng serve --project=rock-band-admin --port 4200"
 	},
 	"private": true,
 	"dependencies": {

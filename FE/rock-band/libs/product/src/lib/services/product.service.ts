@@ -32,6 +32,12 @@ export class ProductService {
 	}
 
 	loadProducts(): Observable<productModel.Product[]> {
-		return this.http.get<productModel.Product[]>(this.productServiceConfig.apiURL).pipe(map((res) => res));
+		return this.http
+			.get<productModel.Product[]>(`${this.productServiceConfig.apiURL}?_page=1&_limit=6`)
+			.pipe(map((res) => res));
+	}
+
+	uploadNewProduct(productItem: Partial<productModel.Product>): Observable<productModel.Product> {
+		return this.http.post<productModel.Product>(this.productServiceConfig.apiURL, productItem).pipe(map((res) => res));
 	}
 }

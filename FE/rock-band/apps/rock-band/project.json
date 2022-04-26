@@ -15,7 +15,9 @@
 				"tsConfig": "apps/rock-band/tsconfig.app.json",
 				"inlineStyleLanguage": "scss",
 				"assets": ["apps/rock-band/src/favicon.ico", "apps/rock-band/src/assets"],
-				"styles": ["apps/rock-band/src/styles.scss"],
+				"styles": [
+					"apps/rock-band/src/styles.scss"
+				],
 				"scripts": []
 			},
 			"configurations": {
